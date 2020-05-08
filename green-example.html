@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+    <style>body {
+    font-family: 'Open Sans', sans-serif;
+    color: #292929;
+}
+
+/* Small devices (small phone screens) */
+@media (min-width: 320px) {
+    /* adjust slide color here with background-color. some defaults already listed */
+    .slide {
+        width: 100%;
+        min-height: 475px;
+        position: relative;
+        margin-bottom: 10px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        /* slightly opaque blue  */
+        /* background-color: #00499033;   */
+        /* light blue  */
+        /* background-color: #E5ECF4; */
+        /* light yellow  */
+        /* background-color: #ffffed; */
+        /* light green  */
+        background-color: #bbcea8; 
+        
+    }
+    /* use slide-title only if you want a title above the directions */
+    .slide-title {
+        /* use background-color for a different color for the title field. uncomment margin and padding if using slide title */
+        /* background-color: #d3d8df;  */
+        color: #292929;
+        /* padding: 15px; */
+        /* margin: 15px 0; */
+    }
+    /* for slide title wording: font and spacing */
+    /* .title {
+        font-size: 30px;
+        padding: 10px 0 0 0;
+    } */
+    /* for this section if slide needs a background image instead of color */
+    /* .background-image {
+        background-image: url("");
+        background-position: center;
+        background-size: auto;
+    }   */
+    /* for all content not including slide title or next button section */
+    .content {
+        margin: 25px;
+        min-height: 325px;
+    }
+    .highlight {
+        background-color: #ffff99;
+    }
+    button {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 125px;
+        border-radius: 8px;
+        /* box-shadow: 5px 10px 18px #889679; */
+        box-shadow: 3px 5px 6px rgba(0,0,0,.2);
+    }
+    .btn {
+        background-color: #e4e4e7;
+        color: #292929;
+        margin: 5px;
+    }
+    .bottom-btn {
+        margin-right: 25px;
+    }
+    button:active, button:focus, .btn:active, .btn:focus {
+        color: #292929;
+    }
+    .text-center {
+        margin-bottom: 25px;
+    }
+    .img-fluid {
+        margin: 10px auto;
+    }
+    .img-width {
+        max-width: 400px;
+    }
+    /* to save space for answer section */
+    .answer-display {
+        min-height: 100px;
+    }
+    /* to provide additional space */
+    .indent {
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    .contentTitle {
+        text-align: center;
+    }
+    .question {
+        color: #292929;
+        font-style: italic;
+        font-size: 1.09em;
+        margin-left: 25px;
+    }
+    li {
+        padding-bottom: 10px;
+    }
+}
+
+/* Small devices (landscape phones, 425px and up) */
+@media (min-width: 425px) {
+    .btn {
+        margin: 10px 30px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .btn {
+        margin: 15px 10px;
+    }
+    .img-width {
+        max-width: 300px;
+    }
+}</style>
+
+
+    <title>Self Test</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="allSlides">
+
+            <!---------------- SLIDE 1, Content  *************** -->
+            <div id="slide1" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Additional instructions go here.</p>
+                            <p class="question">Question or Statement goes here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla accusamus, tenetur totam vitae non laborum ?</p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Possible Answer #1</button>
+                                <button type="button" class="btn bbb">Possible Answer #2</button>
+                                <button type=" button" class="btn ccc">Possible Answer #3</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Answer is incorrect. Additional feedback or reasoning goes here. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Answer is correct! Additional reasoning goes here if needed.</h5>
+                                        <!-- <p>Correct</p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Answer is incorrect. Additional feedback or reasoning goes here. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 2, Content  *************** -->
+            <div id="slide2" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Sales</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is correct!</h5>
+                                        <!-- <p>Correct. </p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 3, Content  *************** -->
+            <div id="slide3" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Wages Payable</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is correct!</h5>
+                                        <!-- <p>Correct.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 4, Content  *************** -->
+            <div id="slide4" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Common Stock</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is correct!</h5>
+                                        <!-- <p>Correct.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 5, Content  *************** -->
+            <div id="slide5" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Capital Expenditures</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statementis incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is correct!</h5>
+                                        <!-- <p>Correct. </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 6, Content  *************** -->
+            <div id="slide6" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Long Term Debt</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is correct!</h5>
+                                        <!-- <p>Correct.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 7, Content  *************** -->
+            <div id="slide7" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Cash Dividends</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect. </p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is correct!</h5>
+                                        <!-- <p>Correct. </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 8, Content  *************** -->
+            <div id="slide8" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Cost of Goods Sold</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is correct!</h5>
+                                        <!-- <p>Correct.</p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 9, Content  *************** -->
+            <div id="slide9" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Accounts Receivable</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is correct!</h5>
+                                        <!-- <p>Correct.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 10, Content  *************** -->
+            <div id="slide10" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Directions</h3>
+                            <p class="indent">Select the correct answer. Indicate whether each item appears on the Balance Sheet, Income Statement, or Cash Flow Statement:</p>
+                            <p class="question">Where does this item appear? <b>Income Taxes Payable</b></p>
+                            <div class="col-12 text-center">
+                                <!-- button group -->
+                                <button type="button" class="btn aaa">Balance Sheet</button>
+                                <button type="button" class="btn bbb">Income Statement</button>
+                                <button type=" button" class="btn ccc">Cash<br>Flow</button>
+                            </div>
+                            <div class="row" class="answer-display">
+                                <div class="col-12">
+                                    <div class="aDisplay">
+                                        <h5 class="contentTitle">Balance Sheet is correct!</h5>
+                                        <!-- <p>Correct.</p> -->
+                                    </div>
+                                    <div class="bDisplay">
+                                        <h5 class="contentTitle">Income Statement is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                    <div class="cDisplay">
+                                        <h5 class="contentTitle">Cash Flow is incorrect. Please try again.</h5>
+                                        <!-- <p>Incorrect.</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------- SLIDE 11, Completed Slide *************** -->
+            <div id="slide11" class="slide">
+                <div class="row slide-title">
+                    <div class="col-12">
+                        <h2 class="title"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content">
+                            <h3>Congratulations!</h3>
+                            <p>You have completed this activity! Feel free to repeat the activity as many times as you'd like. If necessary, contact your instructor for further clarification.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 col-4 offset-sm-8">
+                        <!-- <button type="button" class="back btn">Back</button> -->
+                        <button type="button" class="continue btn bottom-btn">Try Again</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div> <!-- End of allSlides div -->
+    </div> <!--  end of container -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides at once. **/
+
+            $('.allSlides .slide').each(function (e) {
+                if (e != 0) {
+                    $(this).hide();
+                }
+            });
+
+            /** continue/back BUTTON FUNCTIONALITY  **/
+            // for each click on the continue button, hide the current slide and show the next one
+            $('.continue').click(function () {
+                if ($('.allSlides .slide:visible').next().length != 0) {
+                    $('.allSlides .slide:visible')
+                        .next()
+                        .show()
+                        .prev()
+                        .hide();
+
+                } else {
+                    $('.allSlides .slide:visible').hide();
+                    $('.allSlides .slide:first').show(); //wraps around and shows first slide again
+                }
+                // return to default state to hide answer information
+                $(".aDisplay").hide();
+                $(".bDisplay").hide();
+                $(".cDisplay").hide();
+            });
+
+            // if back button is used, for each click on the back button, hide the current slide and show the previous one
+            $('.back').click(function () {
+                if ($('.allSlides .slide:visible').prev().length != 0) {
+                    $('.allSlides .slide:visible')
+                        .prev()
+                        .show()
+                        .next()
+                        .hide();
+                } else {
+                    $('.allSlides .slide:visible').hide();
+                    $('.allSlides .slide:last').show();
+                }
+                // return to default state to hide answer information
+                $(".aDisplay").hide();
+                $(".bDisplay").hide();
+                $(".cDisplay").hide();
+            });
+            /** END Back / Continue Button Functionality ****************/
+
+
+            /****************** button content switching functionality ********************/
+            // default state hides answer info
+            $(".aDisplay").hide();
+            $(".bDisplay").hide();
+            $(".cDisplay").hide();
+
+            // shows the answer info when the button is clicked
+            $('.btn').click(function () {
+                switch (true) {
+                    case $(this).hasClass('aaa'):
+                        $(".aDisplay").show();
+                        $(".bDisplay").hide();
+                        $(".cDisplay").hide();
+                        break;
+                    case $(this).hasClass('bbb'):
+                        $(".aDisplay").hide();
+                        $(".bDisplay").show();
+                        $(".cDisplay").hide();
+                        break;
+                    case $(this).hasClass('ccc'):
+                        $(".aDisplay").hide();
+                        $(".bDisplay").hide();
+                        $(".cDisplay").show();
+                        break;
+                }
+            })
+            /****************** end content display ********************/
+
+        }); 
+    </script>
+
+
+</body>
+
+</html>

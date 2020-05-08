@@ -27,11 +27,11 @@
         /* slightly opaque blue  */
         /* background-color: #00499033;   */
         /* light blue  */
-        /* background-color: #E5ECF4; */
+        /* background-color: #cae6fa; */
         /* light yellow  */
-        /* background-color: #ffffed; */
+        background-color: #f9ba534d;
         /* light green  */
-        background-color: #bbcea8; 
+        /* background-color: #bbcea8;  */
         
     }
     /* use slide-title only if you want a title above the directions */
@@ -67,7 +67,8 @@
         font-size: 16px;
         width: 125px;
         border-radius: 8px;
-        box-shadow: 5px 10px 18px #889679;
+        /* box-shadow: 5px 10px 18px #889679; */
+        box-shadow: 3px 5px 6px rgba(0,0,0,.2);
     }
     .btn {
         background-color: #e4e4e7;
@@ -129,86 +130,7 @@
     }
 }</style>
 
-<script>
-    $(document).ready(function () {
-            /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides at once. **/
 
-            $('.allSlides .slide').each(function (e) {
-                if (e != 0) {
-                    $(this).hide();
-                }
-            });
-
-            /** continue/back BUTTON FUNCTIONALITY  **/
-            // for each click on the continue button, hide the current slide and show the next one
-            $('.continue').click(function () {
-                if ($('.allSlides .slide:visible').next().length != 0) {
-                    $('.allSlides .slide:visible')
-                        .next()
-                        .show()
-                        .prev()
-                        .hide();
-
-                } else {
-                    $('.allSlides .slide:visible').hide();
-                    $('.allSlides .slide:first').show(); //wraps around and shows first slide again
-                }
-                // return to default state to hide answer information
-                $(".aDisplay").hide();
-                $(".bDisplay").hide();
-                $(".cDisplay").hide();
-            });
-
-            // if back button is used, for each click on the back button, hide the current slide and show the previous one
-            $('.back').click(function () {
-                if ($('.allSlides .slide:visible').prev().length != 0) {
-                    $('.allSlides .slide:visible')
-                        .prev()
-                        .show()
-                        .next()
-                        .hide();
-                } else {
-                    $('.allSlides .slide:visible').hide();
-                    $('.allSlides .slide:last').show();
-                }
-                // return to default state to hide answer information
-                $(".aDisplay").hide();
-                $(".bDisplay").hide();
-                $(".cDisplay").hide();
-            });
-            /** END Back / Continue Button Functionality ****************/
-
-
-            /****************** button content switching functionality ********************/
-            // default state hides answer info
-            $(".aDisplay").hide();
-            $(".bDisplay").hide();
-            $(".cDisplay").hide();
-
-            // shows the answer info when the button is clicked
-            $('.btn').click(function () {
-                switch (true) {
-                    case $(this).hasClass('aaa'):
-                        $(".aDisplay").show();
-                        $(".bDisplay").hide();
-                        $(".cDisplay").hide();
-                        break;
-                    case $(this).hasClass('bbb'):
-                        $(".aDisplay").hide();
-                        $(".bDisplay").show();
-                        $(".cDisplay").hide();
-                        break;
-                    case $(this).hasClass('ccc'):
-                        $(".aDisplay").hide();
-                        $(".bDisplay").hide();
-                        $(".cDisplay").show();
-                        break;
-                }
-            })
-            /****************** end content display ********************/
-
-        }); 
-</script>
     <title>Self Test</title>
 </head>
 
@@ -700,9 +622,6 @@
             </div>
 
 
-
-
-
         </div> <!-- End of allSlides div -->
     </div> <!--  end of container -->
 
@@ -711,6 +630,87 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides at once. **/
+
+            $('.allSlides .slide').each(function (e) {
+                if (e != 0) {
+                    $(this).hide();
+                }
+            });
+
+            /** continue/back BUTTON FUNCTIONALITY  **/
+            // for each click on the continue button, hide the current slide and show the next one
+            $('.continue').click(function () {
+                if ($('.allSlides .slide:visible').next().length != 0) {
+                    $('.allSlides .slide:visible')
+                        .next()
+                        .show()
+                        .prev()
+                        .hide();
+
+                } else {
+                    $('.allSlides .slide:visible').hide();
+                    $('.allSlides .slide:first').show(); //wraps around and shows first slide again
+                }
+                // return to default state to hide answer information
+                $(".aDisplay").hide();
+                $(".bDisplay").hide();
+                $(".cDisplay").hide();
+            });
+
+            // if back button is used, for each click on the back button, hide the current slide and show the previous one
+            $('.back').click(function () {
+                if ($('.allSlides .slide:visible').prev().length != 0) {
+                    $('.allSlides .slide:visible')
+                        .prev()
+                        .show()
+                        .next()
+                        .hide();
+                } else {
+                    $('.allSlides .slide:visible').hide();
+                    $('.allSlides .slide:last').show();
+                }
+                // return to default state to hide answer information
+                $(".aDisplay").hide();
+                $(".bDisplay").hide();
+                $(".cDisplay").hide();
+            });
+            /** END Back / Continue Button Functionality ****************/
+
+
+            /****************** button content switching functionality ********************/
+            // default state hides answer info
+            $(".aDisplay").hide();
+            $(".bDisplay").hide();
+            $(".cDisplay").hide();
+
+            // shows the answer info when the button is clicked
+            $('.btn').click(function () {
+                switch (true) {
+                    case $(this).hasClass('aaa'):
+                        $(".aDisplay").show();
+                        $(".bDisplay").hide();
+                        $(".cDisplay").hide();
+                        break;
+                    case $(this).hasClass('bbb'):
+                        $(".aDisplay").hide();
+                        $(".bDisplay").show();
+                        $(".cDisplay").hide();
+                        break;
+                    case $(this).hasClass('ccc'):
+                        $(".aDisplay").hide();
+                        $(".bDisplay").hide();
+                        $(".cDisplay").show();
+                        break;
+                }
+            })
+            /****************** end content display ********************/
+
+        }); 
+    </script>
 
 
 </body>
