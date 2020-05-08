@@ -3,7 +3,6 @@ body {
     color: #292929;
 }
 
-/* Media breakpoints */
 /* Small devices (small phone screens) */
 @media (min-width: 320px) {
     /* adjust slide color here with background-color. some defaults already listed */
@@ -24,9 +23,9 @@ body {
         background-color: #bbcea8; 
         
     }
-    /* use slide-title only if you want a title above teh directions */
+    /* use slide-title only if you want a title above the directions */
     .slide-title {
-        /* use background-color if you want title field to have a different color. Use margin and padding if using slide title */
+        /* use background-color for a different color for the title field. uncomment margin and padding if using slide title */
         /* background-color: #d3d8df;  */
         color: #292929;
         /* padding: 15px; */
@@ -43,21 +42,10 @@ body {
         background-position: center;
         background-size: auto;
     }   */
-    .hide {
-        visibility: hidden;
-    }  
     /* for all content not including slide title or next button section */
     .content {
         margin: 25px;
         min-height: 325px;
-    }
-    .note {
-        color: #575656;
-        font-size: .85em;
-    }
-    .alert {
-        color: #CC444B;
-        font-size: .85em;
     }
     .highlight {
         background-color: #ffff99;
@@ -99,9 +87,6 @@ body {
         margin-left: 25px;
         margin-bottom: 20px;
     }
-    .help {
-        background-color: #CC444B;
-    }
     .contentTitle {
         text-align: center;
     }
@@ -110,15 +95,6 @@ body {
         font-style: italic;
         font-size: 1.09em;
         margin-left: 25px;
-    }
-    .answer {
-        font-size: 1.08em;
-        font-weight: 600;
-        color: #292929;
-        margin-left: 25px;
-    }
-    .border {
-        border: 1px solid #575656;
     }
     li {
         padding-bottom: 10px;
@@ -142,17 +118,3 @@ body {
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) {
-    
-} */
-
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) {
-    
-} */
-
-/* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) { 
-    
-} */
