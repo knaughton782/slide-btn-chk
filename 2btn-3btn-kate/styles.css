@@ -1,0 +1,144 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #292929;
+}
+
+/* Media breakpoints */
+/* Small devices (small phone screens) */
+@media (min-width: 320px) {
+
+    .slide {
+        width: 100%;
+        min-height: 475px;
+        position: relative;
+        margin-bottom: 10px;
+        background-color: #97d7fc;
+    }
+    .slide-title {
+        /* use background-color if you want title field to have a different color. Use margin and padding if using slide title */
+        /* background-color: #d3d8df;  */
+        color: #292929;
+        /* padding: 15px; */
+        /* margin: 15px 0; */
+    }
+    /* for slide title wording: font and spacing */
+    /* .title {
+        font-size: 30px;
+        padding: 10px 0 0 0;
+    } */
+    /* for use if slide needs a background image instead of color */
+    /* .background-image {
+        background-image: url("");
+        background-position: center;
+        background-size: auto;
+    }   */
+    .hide {
+        visibility: hidden;
+    }  
+    /* for all content not include slide title or next button section */
+    .content {
+        margin: 25px;
+        min-height: 325px;
+    }
+    .note {
+        color: #575656;
+        font-size: .85em;
+    }
+    .alert {
+        color: #CC444B;
+        font-size: .85em;
+    }
+    .highlight {
+        background-color: #ffff99;
+    }
+    button {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 125px;
+        border-radius: 8px;
+        box-shadow: 5px 10px 18px #348de0;
+    }
+    .btn {
+        background-color: #e4e4e7;
+        color: #292929;
+        margin: 5px;
+    }
+    .bottom-btn {
+        margin-right: 25px;
+    }
+    button:active, button:focus, .btn:active, .btn:focus {
+        color: #292929;
+    }
+    .text-center {
+        margin-bottom: 25px;
+    }
+    .img-fluid {
+        margin: 10px auto;
+    }
+    .img-width {
+        max-width: 400px;
+    }
+    /* to save space for answer section */
+    .answer-display {
+        min-height: 100px;
+    }
+    /* to provide additional space */
+    .indent {
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    .help {
+        background-color: #CC444B;
+    }
+    .question {
+        color: #292929;
+        font-style: italic;
+        font-size: 1.09em;
+        margin-left: 25px;
+    }
+    .answer {
+        font-size: 1.08em;
+        font-weight: 600;
+        color: #292929;
+        margin-left: 25px;
+    }
+    .border {
+        border: 1px solid #575656;
+    }
+    li {
+        padding-bottom: 10px;
+    }
+}
+
+/* Small devices (landscape phones, 425px and up) */
+@media (min-width: 425px) {
+    .btn {
+        margin: 10px 30px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .btn {
+        margin: 15px 10px;
+    }
+    .img-width {
+        max-width: 300px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+    
+} */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+    
+} */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { 
+    
+} */
