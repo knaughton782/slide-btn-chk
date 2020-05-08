@@ -9,8 +9,206 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
-    <style></style>
+    <style>body {
+    font-family: 'Open Sans', sans-serif;
+    color: #292929;
+}
 
+/* Small devices (small phone screens) */
+@media (min-width: 320px) {
+    /* adjust slide color here with background-color. some defaults already listed */
+    .slide {
+        width: 100%;
+        min-height: 475px;
+        position: relative;
+        margin-bottom: 10px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        /* slightly opaque blue  */
+        /* background-color: #00499033;   */
+        /* light blue  */
+        /* background-color: #E5ECF4; */
+        /* light yellow  */
+        /* background-color: #ffffed; */
+        /* light green  */
+        background-color: #bbcea8; 
+        
+    }
+    /* use slide-title only if you want a title above the directions */
+    .slide-title {
+        /* use background-color for a different color for the title field. uncomment margin and padding if using slide title */
+        /* background-color: #d3d8df;  */
+        color: #292929;
+        /* padding: 15px; */
+        /* margin: 15px 0; */
+    }
+    /* for slide title wording: font and spacing */
+    /* .title {
+        font-size: 30px;
+        padding: 10px 0 0 0;
+    } */
+    /* for this section if slide needs a background image instead of color */
+    /* .background-image {
+        background-image: url("");
+        background-position: center;
+        background-size: auto;
+    }   */
+    /* for all content not including slide title or next button section */
+    .content {
+        margin: 25px;
+        min-height: 325px;
+    }
+    .highlight {
+        background-color: #ffff99;
+    }
+    button {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 125px;
+        border-radius: 8px;
+        box-shadow: 5px 10px 18px #889679;
+    }
+    .btn {
+        background-color: #e4e4e7;
+        color: #292929;
+        margin: 5px;
+    }
+    .bottom-btn {
+        margin-right: 25px;
+    }
+    button:active, button:focus, .btn:active, .btn:focus {
+        color: #292929;
+    }
+    .text-center {
+        margin-bottom: 25px;
+    }
+    .img-fluid {
+        margin: 10px auto;
+    }
+    .img-width {
+        max-width: 400px;
+    }
+    /* to save space for answer section */
+    .answer-display {
+        min-height: 100px;
+    }
+    /* to provide additional space */
+    .indent {
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    .contentTitle {
+        text-align: center;
+    }
+    .question {
+        color: #292929;
+        font-style: italic;
+        font-size: 1.09em;
+        margin-left: 25px;
+    }
+    li {
+        padding-bottom: 10px;
+    }
+}
+
+/* Small devices (landscape phones, 425px and up) */
+@media (min-width: 425px) {
+    .btn {
+        margin: 10px 30px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .btn {
+        margin: 15px 10px;
+    }
+    .img-width {
+        max-width: 300px;
+    }
+}</style>
+
+<script>
+    $(document).ready(function () {
+            /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides at once. **/
+
+            $('.allSlides .slide').each(function (e) {
+                if (e != 0) {
+                    $(this).hide();
+                }
+            });
+
+            /** continue/back BUTTON FUNCTIONALITY  **/
+            // for each click on the continue button, hide the current slide and show the next one
+            $('.continue').click(function () {
+                if ($('.allSlides .slide:visible').next().length != 0) {
+                    $('.allSlides .slide:visible')
+                        .next()
+                        .show()
+                        .prev()
+                        .hide();
+
+                } else {
+                    $('.allSlides .slide:visible').hide();
+                    $('.allSlides .slide:first').show(); //wraps around and shows first slide again
+                }
+                // return to default state to hide answer information
+                $(".aDisplay").hide();
+                $(".bDisplay").hide();
+                $(".cDisplay").hide();
+            });
+
+            // if back button is used, for each click on the back button, hide the current slide and show the previous one
+            $('.back').click(function () {
+                if ($('.allSlides .slide:visible').prev().length != 0) {
+                    $('.allSlides .slide:visible')
+                        .prev()
+                        .show()
+                        .next()
+                        .hide();
+                } else {
+                    $('.allSlides .slide:visible').hide();
+                    $('.allSlides .slide:last').show();
+                }
+                // return to default state to hide answer information
+                $(".aDisplay").hide();
+                $(".bDisplay").hide();
+                $(".cDisplay").hide();
+            });
+            /** END Back / Continue Button Functionality ****************/
+
+
+            /****************** button content switching functionality ********************/
+            // default state hides answer info
+            $(".aDisplay").hide();
+            $(".bDisplay").hide();
+            $(".cDisplay").hide();
+
+            // shows the answer info when the button is clicked
+            $('.btn').click(function () {
+                switch (true) {
+                    case $(this).hasClass('aaa'):
+                        $(".aDisplay").show();
+                        $(".bDisplay").hide();
+                        $(".cDisplay").hide();
+                        break;
+                    case $(this).hasClass('bbb'):
+                        $(".aDisplay").hide();
+                        $(".bDisplay").show();
+                        $(".cDisplay").hide();
+                        break;
+                    case $(this).hasClass('ccc'):
+                        $(".aDisplay").hide();
+                        $(".bDisplay").hide();
+                        $(".cDisplay").show();
+                        break;
+                }
+            })
+            /****************** end content display ********************/
+
+        }); 
+</script>
     <title>Self Test</title>
 </head>
 
@@ -514,7 +712,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
+
 </body>
 
 </html>

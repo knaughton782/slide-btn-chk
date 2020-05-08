@@ -1,16 +1,11 @@
 $(document).ready(function () {
-
-
-  /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides. **/
+  /** Hide ALL SLIDES EXCEPT CURRENT, starts with first slide. For development, comment out this section to see all the slides at once. **/
 
   $('.allSlides .slide').each(function (e) {
     if (e != 0) {
       $(this).hide();
     }
   }); 
-
-  // end hide slide functionality
-
 
 /** continue/back BUTTON FUNCTIONALITY  **/
   // for each click on the continue button, hide the current slide and show the next one
@@ -32,7 +27,7 @@ $(document).ready(function () {
     $(".cDisplay").hide();
   });
 
-  // for each click on the back button, hide the current slide and show the previous one
+  // if back button is used, for each click on the back button, hide the current slide and show the previous one
   $('.back').click(function () {
     if ($('.allSlides .slide:visible').prev().length != 0) {
       $('.allSlides .slide:visible')
@@ -80,4 +75,4 @@ $(document).ready(function () {
   })
   /****************** end content display ********************/
 
-}); // jquery end tag
+}); 
